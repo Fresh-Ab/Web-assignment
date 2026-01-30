@@ -1,0 +1,143 @@
+:root{
+    --primary: #4749e7;
+    --secondary: #3edddd;
+    --dark: black;
+    --light: white;
+    --card-bg: #f2f2f2;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, white, #d9ebec);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Moblie First */
+.page{
+    display: block;
+}
+
+.header{
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 32px 16px ;
+    text-align: center;
+}
+
+.header{
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* Navbar */
+.navbar{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    background: #eee;
+    padding: 12px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+/* Main */
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .main{
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.main h2{
+    margin-bottom: 12px;
+}
+
+/* Cards */
+.content{
+    background: #eee;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.cards{
+   margin-top: 20px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+/* tablet */
+@media (min-width: 640px) {
+  .cards{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Card1, .Card2, .Card3{
+    background-color:#ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Sidebar */
+.aside{
+    background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .aside{
+    display: block;
+  }
+}
+
+.aside h3 {
+  margin-top: 0;
+}
+
+.aside ul {
+  padding-left: 18px;
+  margin: 12px 0 0 0;
+}
+
+.aside li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer{
+    grid-area: footer;
+    background: #2f3b45;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
